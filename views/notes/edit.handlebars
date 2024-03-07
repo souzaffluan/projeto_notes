@@ -1,0 +1,16 @@
+<a href="/">Voltar</a>
+<h2>Editar nota: {{note.title}}</h2>
+<form action="/notes/update" method="POST">
+<input type="hidden" name="id" value="{{note._id}}">
+<div class="mb-3">
+    <label for="title" class="form-label">Título:</label>
+    <input type="text" class="form-control" id="title" name="title" placeholder="O que você pretende fazer?" value="{{note.title}}">
+</div>
+<div class="mb-3">
+    <label for="description" class="form-label">Descrição:</label><br>
+    <textarea class="form-control" id="description" name="description" placeholder="Insira a descriçaõ" >{{note.description}}</textarea>
+</div>
+<button type="submit" class="btn btn-primary">Atualizar</button>
+
+
+</form>
